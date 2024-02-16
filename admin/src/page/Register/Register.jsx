@@ -50,10 +50,10 @@ export default function Register() {
     <div className={styles.login}>
       <div className={styles.loginWrapper}>
         <div className={styles.loginLeft}>
-          <h3 className={styles.loginLogo}>Grocery</h3>
+          <h3 className={styles.loginLogo}>Shopper</h3>
           <span className={styles.loginDesc}>
             Buy any product from our Simple and user friendly Ecommerce
-            Gerocery.
+            Shopper.
           </span>
         </div>
         <div className={styles.loginRight}>

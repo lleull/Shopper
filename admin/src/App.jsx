@@ -4,7 +4,7 @@ import styles from "./App.module.css";
 import Home from "./page/Homepage/Home";
 import Checkout from "./page/Checkout/Cart";
 import { useDispatch, useSelector } from "react-redux";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import ReactDOM from "react-dom";
 import Login from "./page/Login/Login";
@@ -41,10 +41,7 @@ const App = () => {
         </div>
         <div className={styles.homeapp}>
           <Routes>
-            <Route
-              path="/"
-              element={userid ? <Home/> : <Login />}
-            />
+            <Route path="/" element={userid ? <Home /> : <Login />} />
             <Route path="/order" element={<Checkout />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />

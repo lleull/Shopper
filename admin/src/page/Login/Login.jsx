@@ -37,9 +37,10 @@ export default function Login() {
     <div className={styles.login}>
       <div className={styles.loginWrapper}>
         <div className={styles.loginLeft}>
-          <h3 className={styles.loginLogo}>Et-Grocery</h3>
+          <h3 className={styles.loginLogo}>Shopper</h3>
           <span className={styles.loginDesc}>
-            Buy what you want with only one click
+          Buy any product from our Simple and user friendly Ecommerce
+            Shopper.
           </span>
         </div>
         <div className={styles.loginRight}>

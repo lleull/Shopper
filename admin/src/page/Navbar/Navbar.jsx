@@ -32,14 +32,17 @@ const Navbar = () => {
     dispatch(removeall());
   };
   const handleLogout = () => {
-    localStorage.removeItem("userid"), dispatch(removeuser());
+    localStorage.removeItem("userid"),
+      dispatch(removeuser()),
+      dispatch(removeall());
+    window.location.reload("/");
   };
   return (
     <div className={styles.navbar}>
       <div className={styles.wrapnav}>
         <div className={styles.firstnav}>
           <h1 onClick={() => handlehome()} className={styles.title}>
-            Shopperwwwwwddwwdwwqwwdq
+            Shopper
           </h1>
         </div>
         <div className={styles.secondnav}>
@@ -114,14 +117,11 @@ const Navbar = () => {
               ? UserData?.map((user) => (
                   <div key={user.id} className={styles.userinfo}>
                     <h3 className={styles.username}>{user.username}</h3>
-                    <span className={styles.orderhistory}>
+                    {/* <span className={styles.orderhistory}>
                       <span className={styles.type}>Order</span>
                       <span className={styles.type}>0</span>
-                    </span>
-                    <button
-                      onClick={() => dispatch(removeuser())}
-                      className={styles.logout}
-                    >
+                    </span> */}
+                    <button onClick={handleLogout} className={styles.logout}>
                       Logout
                     </button>
                   </div>
@@ -131,7 +131,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className={styles.navdetail}>
-        {/* <div className={styles.wraptext}>
+        <div className={styles.wraptext}>
           <MdOutlineTag className={styles.icons} />
           <h4 className={styles.texts}>Offers</h4>
         </div>
@@ -146,7 +146,7 @@ const Navbar = () => {
         <div className={styles.wraptext}>
           <MdShoppingBag className={styles.icons} />
           <h4 className={styles.texts}>Orders</h4>
-        </div> */}
+        </div>
         <div
           onClick={() => dispatch(openaction())}
           className={totalprice > 0 ? styles.cartadded : styles.wraptext}
