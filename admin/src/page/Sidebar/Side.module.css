@@ -1,0 +1,43 @@
+.sidebar {
+  background: white;
+  width: 15%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  position:fixed;
+  align-items: flex-start;
+  padding: 10px 10px;
+  overflow: hidden;
+  @media  ( width < 780px) {
+  
+    display: none;
+    
+  }
+}
+.sideno{
+  display: none;
+}
+.texts {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  
+}
+.texts:hover{
+  background: rgb(41, 38, 38);
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: white;
+}
+.logo {
+  width: 25px;
+  height: 25px;
+}
+.text {
+  text-align: left;
+  font-weight: 400;
+  margin-left: 2px;
+}

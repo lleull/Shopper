@@ -1,0 +1,40 @@
+.homepage {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.coverimg {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: flex-start;
+}
+.imgdata {
+  width: 100%;
+  border-radius: 20px;
+  height: 70%;
+  object-fit: cover;
+}
+.pages {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  gap: 10px;
+  padding: 10px 10px;
+  justify-content: center;
+  height: 20px;
+}
+.circle {
+  background: black;
+  border-radius: 50%;
+  width: 1px;
+  height: 1px;
+  padding: 5px 5px;
+}
+.circle:first-child{
+    background: rgba(128, 128, 128, 0.452);
+}

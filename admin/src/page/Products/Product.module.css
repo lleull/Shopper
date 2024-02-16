@@ -1,0 +1,146 @@
+.product {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.firstline {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content:flex-end;
+  @media  ( width < 768px) {
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+}
+.searchinput {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+::placeholder {
+  color: gray;
+  margin-left: 30px;
+}
+.searchinput:focus {
+  border: none;
+}
+.searchicons {
+  color: wheat;
+  background: black;
+  border-radius: 50%;
+  padding: 5px 5px;
+}
+.form {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(248, 245, 245);
+  border-radius: 20px;
+  padding: 2px 2px;
+  display: none;
+  border: 1px solid rgba(0, 0, 0, 0.459);
+  @media (width < 780px) {
+    display: flex;
+    
+  }
+}
+
+.logo{
+    width: 25px;
+    height: 25px;
+    margin-left: 110px;
+}
+.grocery {
+  font-weight: 600;
+  font-size: 20px;
+}
+.grocery:last-child {
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.cards {
+  flex-wrap: wrap;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.imgfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 180px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  background: white;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+  @media (width < 780px) {
+    width: 48%;
+
+    
+  }
+}
+.img {
+  width: 90%;
+  height: 90px;
+  margin-top: 5px;
+  object-fit: cover;
+}
+.descs {
+  display: flex;
+  width: 90%;
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.gram {
+  color: rgb(44, 43, 43);
+  font-weight: 500;
+}
+.name {
+  font-weight: 680;
+  font-size: 11px;
+}
+.mydesc {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  align-items: center;
+}
+.price {
+  font-weight: 680;
+  font-size: 18px;
+}
+.btn {
+  margin-top: 5px;
+  width: 100%;
+  background: rgba(9, 9, 48, 0.795);
+  padding: 10px 0;
+  border: none;
+  color: white;
+  position: absolute;
+  top: 85%;
+}
