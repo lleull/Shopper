@@ -10,7 +10,7 @@ app.use(express.json())
 app.use("/login", User);
 app.use("/register", Register);
 
-const Port = 3000 || process.env.Port;
+const Port = 3000;
 
 app.listen(Port, () => {
   console.log(`Sevrver is Running ${Port}`);
