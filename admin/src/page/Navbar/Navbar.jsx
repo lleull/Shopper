@@ -23,6 +23,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const [showuser, setshowuser] = useState(false);
   const totalprice = useSelector((state) => state.product.totalprice);
+  const totalorder = useSelector((state) => state.product.orderdata);
 
   const UserData = useSelector((state) => state.user.Userdata);
   console.log(UserData);
@@ -89,7 +90,7 @@ const Navbar = () => {
                     <h3 className={styles.username}>{user.username}</h3>
                     <span className={styles.orderhistory}>
                       <span className={styles.type}>Order</span>
-                      <span className={styles.type}>0</span>
+                      <span className={styles.type}>{totalorder}</span>
                     </span>
                     <button onClick={handleLogout} className={styles.logout}>
                       Logout

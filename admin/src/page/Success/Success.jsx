@@ -1,11 +1,12 @@
 import styles from "./Success.module.css";
 import img from "./../../Image/icons8-success-64.png";
-import { removeall } from "../../Redux/Product/Productslice";
+import { addorder, removeall } from "../../Redux/Product/Productslice";
 import { useDispatch } from "react-redux";
 import { cartsuccess } from "../../Redux/Product/Productslice";
 const Successbox = () => {
   const dispatch = useDispatch();
   const handlereload = () => {
+    dispatch(addorder())
     dispatch(cartsuccess());
     dispatch(removeall());
     window.location.replace("/");

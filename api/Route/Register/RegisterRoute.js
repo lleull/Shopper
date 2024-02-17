@@ -1,20 +1,20 @@
 import  express from "express";
 import UserSchema from "../../Models/UserModel.js";
-import bcrypt from "bcrypt"
+
 const router = express.Router();
 
 router.post("/", async (req, res) => {
   try {
     const userDatas = req.body;
     console.log(userDatas);
-    const password = userDatas.password;
-    const salt = bcrypt.genSaltSync(10);
-    const hashedpassowrd = await bcrypt.hash(password, salt);
+    // const password = userDatas.password;
+    // const salt = bcrypt.genSaltSync(10);
+    // const hashedpassowrd = await bcrypt.hash(password, salt);
 
     const UserFound = new UserSchema({
       email: userDatas.email,
       country: userDatas.country,
-      password: hashedpassowrd,
+      password: userDatas.password,
       phone: userDatas.phone,
       username: userDatas.username,
     });

@@ -6,12 +6,16 @@ const initialState = {
   opencart: false,
   success: false,
   searchinput: "",
+  orderdata : 0
 };
 
 export const ProductSlice = createSlice({
   name: "product",
   initialState,
   reducers: {
+    addorder:(state) => {
+       state.orderdata  ++
+    },
     addsearch: (state, action) => {
       state.searchinput = action.payload;
     },
