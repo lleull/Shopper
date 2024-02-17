@@ -74,6 +74,8 @@ const Navbar = () => {
             </div>
             <div className={styles.navpart}>
               <img src={userimg} alt="s" className={styles.icons} />
+           
+
               <img
                 src={arrow}
                 onClick={() => setshowuser(!showuser)}

@@ -182,8 +182,9 @@ cursor: pointer;
   position: fixed;
   top: 50px;
   border-radius: 10px;
-  background: rgba(7, 2, 14, 0.952);
+  background: rgba(255, 255, 255, 0.952);
   left: 80%;
+  border: 1px solid rgb(0, 0, 0);
 animation: 0.3s slideuser ease-in-out ;
   @media (width < 780px) {
     width: 120px;
@@ -197,18 +198,19 @@ transform: translateY(-10px);
   }
   100%{
     transform: translateY(0);
+   
 
   }
   
 }
 .username {
   font-size: 15px;
-  color: white;
+  color: rgb(12, 11, 11);
 }
 .orderhistory {
   display: flex;
   width: 100%;
   align-items: center;
-  color: white;
+  color: rgb(0, 0, 0);
   justify-content: space-between;
 }
