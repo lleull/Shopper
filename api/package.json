@@ -10,10 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "build": "nodemon server.js",
-    "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist",
-    "vercel-build": "echo hello "
+    "build":"nodemon server.js",
+    "ts.check": "tsc --project tsconfig.json"
   },
   "keywords": [],
   "author": "",
