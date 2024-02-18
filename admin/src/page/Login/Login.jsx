@@ -3,15 +3,18 @@ import styles from "./Login.module.css";
 import { useState } from "react";
 import { backURL } from "../../App";
 import { useNavigate } from "react-router-dom";
+import Loader from "../../ui/Loader";
 export default function Login() {
   const [username, setusername] = useState("");
   const [password, setpassword] = useState(false);
+  const [loading, setloading] = useState(false)
   const [err, seterr] = useState("");
 
   console.log(password, username);
   const navigate = useNavigate();
   const handleLogin = async (e) => {
     e.preventDefault();
+    setloading(true)
     const userdata = {
       username,
       password,
@@ -24,17 +27,21 @@ export default function Login() {
         },
       });
       if (res.data) {
+        
         console.log(res.data);
         localStorage.setItem("userid", res.data.id);
+        setloading(false)
         navigate("/");
       }
     } catch (error) {
       seterr(true);
+      setloading(false)
     }
   };
 
   return (
     <div className={styles.login}>
+      {loading ? <Loader/> : ""}
       <div className={styles.loginWrapper}>
         <div className={styles.loginLeft}>
           <h3 className={styles.loginLogo}>Shopper</h3>

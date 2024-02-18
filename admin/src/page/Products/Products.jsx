@@ -7,22 +7,28 @@ import { MdAddShoppingCart } from "react-icons/md";
 import logo from "./../../Image/icons8-add-properties-64.png";
 import { addsearch } from "../../Redux/Product/Productslice";
 import { MdSearch } from "react-icons/md";
+import Loader from "../../ui/Loader";
 const Products = () => {
   const [Products, setProducts] = useState([]);
   console.log(Products);
   const dispatch = useDispatch();
+  const [loading, setloading] = useState(false)
+
   const searchinput = useSelector((state) => state.product.searchinput);
   const SearchData = Products.filter((data) => data.title.toLowerCase().includes(searchinput.toLowerCase()));
   useEffect(() => {
     const getdata = async () => {
+      setloading(true)
       try {
         const response = await axios.get("https://dummyjson.com/products");
         if (response.data) {
           setProducts(response.data?.products);
+          setloading(false)
         } else {
           console.log("error");
         }
       } catch (error) {
+        setloading(false)
         console.log(error);
       }
     };
@@ -34,6 +40,7 @@ const Products = () => {
 
   return (
     <div className={styles.products}>
+      {loading ? <Loader/> :""}
       <div className={styles.firstline}>
       
           <form className={styles.form}>
