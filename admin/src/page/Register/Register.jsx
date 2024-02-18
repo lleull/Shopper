@@ -57,6 +57,7 @@ export default function Register() {
           </span>
         </div>
         <div className={styles.loginRight}>
+
           <form className={styles.loginBox}>
             <input
               onChange={(e) => setusername(e.target.value)}

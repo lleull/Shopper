@@ -4,7 +4,12 @@ import Register from "./Route/Register/RegisterRoute.js";
 import User from "./Route/Users/UsersRoute.js";
 import connectmonogo from "./mongo.js";
 import cors from "cors";
-app.use(cors())
+const option = {
+  origin: '*',
+  methods: ['GET', 'POST', 'DELETE', 'PUT'],
+  
+}
+app.use(cors(option))
 app.use(express.json())
 
 app.use("/login", User);

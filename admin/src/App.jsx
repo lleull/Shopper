@@ -12,7 +12,7 @@ import Register from "./page/Register/Register";
 import { openaction, removeall } from "./Redux/Product/Productslice";
 import Successbox from "./page/Success/Success";
 import Cartproduct from "./Cart/Cart";
-export const backURL = "http://localhost:3000";
+export const backURL = "https://shopappi.onrender.com";
 const App = () => {
   const successcart = useSelector((state) => state.product.success);
   const successid = document.getElementById("success");

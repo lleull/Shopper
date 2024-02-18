@@ -38,12 +38,10 @@ export default function Login() {
       <div className={styles.loginWrapper}>
         <div className={styles.loginLeft}>
           <h3 className={styles.loginLogo}>Shopper</h3>
-          <span className={styles.loginDesc}>
-          Buy any product from our Simple and user friendly Ecommerce
-            Shopper.
-          </span>
+          
         </div>
         <div className={styles.loginRight}>
+        <h2 className={styles.loginname}>Login</h2>
           <form onSubmit={handleLogin} className={styles.loginBox}>
             <input
               onChange={(e) => setusername(e.target.value)}
